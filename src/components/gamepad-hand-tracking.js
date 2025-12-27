@@ -14,7 +14,7 @@ AFRAME.registerComponent('gamepad-hand-tracking', {
     this.handPosition = new THREE.Vector3();
     this.handOffset = new THREE.Vector3();
     this.cameraWorldPosition = new THREE.Vector3();
-    this.inputMode = AFRAME.utils.getUrlParameter('input') || 'vr';
+    this.inputMode = AFRAME.utils.getUrlParameter('input') || 'desktop';
     this.isEnabled = this.data.enabled && this.inputMode === 'gamepad';
     this.leftIndex = null;
     this.rightIndex = null;

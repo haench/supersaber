@@ -30,6 +30,15 @@ URL](https://supermedium.com/supersaber/play.html) if you have a
 WebVR-compatible browser with Vive or Rift. We recommend Supermedium though as
 it is not prone to regressions and is configured for performance.
 
+Desktop mode (no headset) is enabled by default. Use a mouse/keyboard with:
+- Right-hand trigger: left mouse button or Space.
+- Left-hand trigger: Shift.
+- Move right hand: I/J/K/L (forward/left/back/right), U/O (up/down).
+- Move left hand: W/A/S/D (forward/left/back/right), Q/E (up/down).
+
+VR mode can be forced with `?input=vr`, while gamepad mode can be forced with
+`?input=gamepad`.
+
 ## Development
 
 Super Saber is built with [A-Frame](https://aframe.io) (incl.

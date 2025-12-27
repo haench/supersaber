@@ -52,7 +52,7 @@ AFRAME.registerState({
     genre: '',
     genres: require('../constants/genres'),
     genreMenuOpen: false,
-    inputMode: AFRAME.utils.getUrlParameter('input') || 'vr',
+    inputMode: AFRAME.utils.getUrlParameter('input') || 'desktop',
     inVR: false,
     isGameOver: false,  // Game over screen.
     isPaused: false,  // Playing, but paused. Not active during menu.
