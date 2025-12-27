@@ -52,6 +52,7 @@ AFRAME.registerState({
     genre: '',
     genres: require('../constants/genres'),
     genreMenuOpen: false,
+    inputMode: AFRAME.utils.getUrlParameter('input') || 'vr',
     inVR: false,
     isGameOver: false,  // Game over screen.
     isPaused: false,  // Playing, but paused. Not active during menu.
@@ -521,8 +522,9 @@ AFRAME.registerState({
 
     const anyMenuOpen = state.menuActive || state.isPaused || state.isVictory ||
                         state.isGameOver || state.isSongLoading || state.isSongFetching;
-    state.leftRaycasterActive = anyMenuOpen && state.activeHand === 'left' && state.inVR;
-    state.rightRaycasterActive = anyMenuOpen && state.activeHand === 'right' && state.inVR;
+    const handTrackingActive = state.inVR || state.inputMode !== 'vr';
+    state.leftRaycasterActive = anyMenuOpen && state.activeHand === 'left' && handTrackingActive;
+    state.rightRaycasterActive = anyMenuOpen && state.activeHand === 'right' && handTrackingActive;
 
     // Song is decoding if it is loading, but not fetching.
     if (state.isSongLoading) {

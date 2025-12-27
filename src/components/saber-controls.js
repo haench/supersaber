@@ -187,6 +187,13 @@ AFRAME.registerComponent('saber-controls', {
         downEvents: ['trackpaddown', 'triggerdown', 'gripdown'],
         upEvents: ['trackpadup', 'triggerup', 'gripup']
       }
+    },
+
+    'gamepad-controls': {
+      cursor: {
+        downEvents: ['triggerdown'],
+        upEvents: ['triggerup']
+      }
     }
   }
 });
